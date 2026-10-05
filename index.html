@@ -1,0 +1,85 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mental Health Support Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">MindCare</div>
+            <button class="hamburger" id="hamburger">&#9776;</button> <!-- ☰ -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="appointment.html">Book</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="chat.html">Chat</a></li>
+                <li><a href="#" id="themeToggle">🌙</a></li>
+                <li><a href="#" onclick="openModal('loginModal')">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Your Mental Wellness Matters</h1>
+            <p>Connect with professionals, access helpful resources, and take the first step to better mental health.
+            </p>
+            <a href="appointment.html" class="btn-primary">Book a Session</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h2>Trusted Professionals</h2>
+            <p>Licensed counselors available 24/7.</p>
+        </div>
+        <div class="feature">
+            <h2>Self-Help Resources</h2>
+            <p>Articles, videos, and exercises curated by experts.</p>
+        </div>
+        <div class="feature">
+            <h2>Anonymous Chat</h2>
+            <p>Talk safely and privately with support volunteers.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MindCare | All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login</h2>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button onclick="alert('Login simulated')">Login</button>
+            <p>Don't have an account? <a href="#" onclick="switchModal('loginModal', 'signupModal')">Sign Up</a></p>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signupModal')">&times;</span>
+            <h2>Sign Up</h2>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <button onclick="alert('Signup simulated')">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="switchModal('signupModal', 'loginModal')">Login</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
